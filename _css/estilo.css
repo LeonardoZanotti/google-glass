@@ -1,0 +1,334 @@
+@charset "UTF-8";									/* Linguagem universal de códigos (para não haver erros quanto a linguagem e acentuação */
+@font-face  {										/* Adiciona uma nova opção de fonte */
+			font-family: 'FonteLogo';				/* Nome da fonte para ser usado */
+			src: url("../_fonts/Roboto-ThinItalic.ttf");	/* link da pasta onde está o arquivo da fonte */
+	}
+	
+@font-face  {										/* Adiciona uma nova opção de fonte */
+			font-family: 'FonteSub';				/* Nome da fonte para ser usado */
+			src: url("../_fonts/GeosansLight.ttf"); /* link da pasta onde está o arquivo da fonte */
+	}
+
+		p {											/* Isso vai para um link dentro do cabeçalho que faz com que o seguinte estilo passe para o texto */							
+			font-size: 14pt;						/* Tamanho da fonte de 14 pontos */
+			text-align: justify;					/* Alinhamento justificado */
+			text-indent: 50px;						/* Parágrafo de 50 pixels */			
+	}
+		
+		body {										/* Para o grupo body (site) possuir o seguinte: */
+			background-color: #dddddd;			 	/* Cor de fundo cinza claro */
+			Font-family: Arial, sans-serif;			/* Fonte arial sem serifa (serifa é uns traços nos cantos da letra como esse "A") */
+	}	
+		
+		/* Formatação de imagens com legendas */
+		
+		figure.foto-legenda  {						/* Para todo grupo figure com class (class é representado por ".") = "foto-legenda" possuir o seguinte: */ 
+			position: relative;						/* Posição relativa (Posição absoluta é a do site, posição relativa é o do próprio grupo) */
+			border: 4px solid white;				/* Borda de 4 pixels, sólida (o solid poderia ser dashed (tracejado), dotted (pontilhado), double (duplicado), entre outros tipos de linha) e na cor branco (para se adicionar uma borda em apenas uma direção pode-se usar os comandos "border-left" (esquerda), "border-right" (direita), "border-bottom" (inferior) e "border-top" (superior)) */
+			width: 618px;							/* Largura de 618 pixels */
+			height: 100%;							/* Altura com 100% da altura original */
+			box-shadow: 1px 1px 4px black;			/* Sombra de 1 pixel horizontal 1 pixel vertical 4 píxeis de espalhamento e na cor preto */
+			right:38px;								/* Move 38 pixels para a esquerda */
+	}
+	
+	
+		figure.foto-legenda img  {					/* Para as imagens (img) do grupo figure com class (class é representado por ".") = "foto-legenda"  possuir o seguinte: */
+			width: 100%;							/* Largura de 100% da largura original*/
+			height: 100%;							/* Altura de 100% da altura original */
+			
+	}
+	
+		figure.foto-legenda figcaption {			/* Para o grupo figcaption de um grupo figure com class (class é representado por ".") = "foto-legenda" possuir o seguinte: */
+			font-size: 35px;						/* Tamanho da fonte de 35 pixels */
+			opacity: 0;								/* Opacidade do figcaption é 0 (Não visível) */	
+			position: absolute;						/* Posição absoluta (Posição absoluta é a do site, posição relativa é o do próprio grupo) */
+			top: 0px;								/* Figcaption posição topo */
+			background-color: rgba(0, 0, 0, 0.7);	/* Fundo do figcaption na cor preta (0, 0, 0,) e com 0.7 de transparência */
+			color: white;							/* Cor do texto = branco */
+			width: 100%;							/* Largura do figcaption = 100% */
+			height: 100%;							/* Altura do figcaption = 100% */		
+			padding: 10px;							/* Aumenta o espaço dentro do figcaption em 10 pixels em todas as direções (o comando está abreviado pois os 10 pixels são em todas as direções, entretanto ele seria "padding: 10px (cima) 10px (direita) 10px (baixo) 10px (esquerda)" respectivamente) (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+			box-sizing: border-box;					/* Ajuste na posição com uma borda */
+			transition: opacity 1s; 				/* Transição para opacidade com duração de 1 segundos */
+	}
+	
+		figure.foto-legenda divisao2 {				/* Para o grupo divisao2 de um grupo figure com class (class é representado por ".") = "foto-legenda" possuir o seguinte: */
+			font-size: 50px;						/* Tamanho da fonte = 50 pixels */
+	}	
+	
+		figure.foto-legenda h6 {					/* Para o grupo h6 de um grupo figure com class (class é representado por ".") = "foto-legenda" possuir o seguinte: */
+			text-indent: 50px;						/* Parágrafo de 50 pixels */
+			font-size: 30px;						/* Tamanho da fonte de 30 pixels */
+			font-family: Arial;						/* Fonte arial */
+	}	
+		figure.foto-legenda:hover figcaption {		/* Aplica um efeito de transição (hover) no grupo figcaption de um grupo figure com class (class é representado por ".") = "foto-legenda" quando passar o mouse por cima */
+			opacity: 1;								/* Muda a opacidade para 1 (Vísivel) */
+	}
+		
+	/* Formatação do menu de navegação */
+	
+		nav#menu  {									/* Para os menus de navegação (nav) com identificação (id) (identificação é representado por "#") = "menu" fazer o seguinte: */
+			display: block;							/* É representado como um bloco */
+	}
+	
+		nav#menu ul {								/* Para os unordered list (ul) dos menus de navegação (nav) com identificação (id) (identificação é representado por "#") = "menu" possuir o seguinte: */
+			list-style: none; 						/* Sem estilo da lista */
+			text-transform: uppercase;				/* Letras em maiúsculo */
+			position: absolute;						/* Posição absoluta (Posição absoluta é a do site, posição relativa é o do próprio menu) */
+			top: -20px;								/* Mover a lista 20 pixels para cima */
+			left: 500px;							/* Mover a lista 500 pixels para a direita */
+	}
+	
+		nav#menu li  {								/* Para cada item da lista (li) de um menu de navegação (nav) com identificação (id) (identificação é representada por "#") = "menu"  fazer o seguinte: */		
+			display: inline-block;					/* Muda a representação da lista de vertical para horizontal */
+			background-color: #dddddd;				/* Muda a cor do fundo para cinza claro */
+			padding: 10px;							/* Aumenta o espaço dentro de cada li em 10 pixels em todas as direções (o comando está abreviado pois os 10 pixels são em todas as direções, entretanto ele seria "padding: 10px (cima) 10px (direita) 10px (baixo) 10px (esquerda)" respectivamente) (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+			margin: 2px;							/* Aumenta o espaço fora do li em 2 pixels em todas as direções (o comando está abreviado pois os 2 pixels são em todas as direções, entretanto ele seria "margin: 2px (cima) 2px (direita) 2px (baixo) 2px (esquerda)" respectivamente) (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+			transition: background-color 1s;  		/* O tempo da transição para o background-color do efeito hover é de 1 segundo, como a tag transition não funciona em alguns navegadores, pode-se usar o site http://expressprefixr.herokuapp.com/ que após colar o código no espaço, fornece outro código que funciona no maior número de navegadores possíveis */ 
+			-moz-transition: background-color 1s;	/* O tempo da transição para o background-color do efeito hover é de 1 segundo (código para que o transition funcione em mais navegadores) */
+			-ms-transition: background-color 1s;	/* O tempo da transição para o background-color do efeito hover é de 1 segundo (código para que o transition funcione em mais navegadores) */
+			-webkit-transition: background-color 1s;/* O tempo da transição para o background-color do efeito hover é de 1 segundo (código para que o transition funcione em mais navegadores) */
+			-o-transition: background-color 1s;		/* O tempo da transição para o background-color do efeito hover é de 1 segundo (código para que o transition funcione em mais navegadores) */
+
+
+	}
+	
+		nav#menu li:hover  {						/* Aplica um efeito de transição (hover) nos itens da lista (li) do menu de navegação (nav) com identificação (id) (identificação é representada por "#") = "menu" quando passar o mouse por cima */
+			background-color: #606060;				/* Muda o background-color para cinza escuro */
+	}
+		
+		nav#menu h1  {								/* Para o título h1 dos menus de navegação com identificação (id) (identificação é representada por "#") = "menu" possuir o seguinte: */
+			display: none;							/* Não representado */
+	}
+		
+		nav#menu a  {								/* Para as ancoras (textos com links) dos menus de navegação (nav) com identificação (id) (identificação é representado por "#") = "menu" possuir o seguinte: */
+			color: #000000;							/* Cor do texto preto */
+			text-decoration: none;					/* Sem decoração de texto */
+			transition: color 0.5s;					/* O tempo da transição para o color do efeito hover é de 0.5 segundo, como a tag transition não funciona em alguns navegadores, pode-se usar o site http://expressprefixr.herokuapp.com/ que após colar o código no espaço, fornece outro código que funciona no maior número de navegadores possíveis */ 
+			-webkit-transition: color 0.5s;			/* O tempo da transição para o color do efeito hover é de 0.5 segundo (código para que o transition funcione em mais navegadores) */
+			-moz-transition: color 0.5s;				/* O tempo da transição para o color do efeito hover é de 0.5 segundo (código para que o transition funcione em mais navegadores) */
+			-ms-transition: color 0.5s;				/* O tempo da transição para o color do efeito hover é de 0.5 segundo (código para que o transition funcione em mais navegadores) */
+			-o-transition: color 0.5s;				/* O tempo da transição para o color do efeito hover é de 0.5 segundo (código para que o transition funcione em mais navegadores) */
+			
+	}
+	
+		nav#menu a:hover {							/* Aplica um efeito de transição (hover) nas ancoras (a - texto com link) dos menus de navegação (nav) com identificação (identificação é representado por "#") = "menu" quando passar o mouse por cima */
+			color: #ffffff							/* Cor do texto branco */
+	}	
+	
+		/* Formatação do grupo div */
+		
+		div#interface  {							/* Para as divisões (div) que tenham identificação (id) (identificação é representado por "#") = "interface" possuir o seguinte: */
+			width: 1200px;							/* Largura de 1200 pixels */
+			background-color: #ffffff;				/* Cor de fundo branco */
+			margin: -20px auto 0px auto;			/* Diminui a margem de cima em 20 pixels, a de baixo em 0 pixels e deixa as margens laterais automáticas (deixar como auto faz com que o texto fique sempre centralizado (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+			padding: 10px;							/* Aumenta o espaço dentro do div em 10 pixels em todas as direções (o comando está abreviado pois os 10 pixels são em todas as direções, entretanto ele seria "padding: 10px (cima) 10px (direita) 10px (baixo) 10px (esquerda)" respectivamente) (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+			box-shadow: 2px 2px 10px black; 		/* Adiciona uma sombra de 2 pixels horizontal 2 pixels vertical 10 pixels de espalhamento e na cor preto */
+	}	
+
+		/* Formatação do cabeçalho do html */	
+		
+		header#cabecalho img#icone  {				/* Para toda imagem (img) com identificação (id) (identificação é representado por "#") = "icone" de um grupo header com identificação (id) (identificação é representado por "#") = "cabecalho" possuir o seguinte: */
+			position: absolute;						/* Posição absoluta	 (posição absoluta é a do site, e relativa a da própria imagem)	*/
+			top: 60px;								/* Posição da imagem com distância de 60 pixels do topo do site */
+			left: 950px; 							/* Posição da imagem com distância de 950 pixels do lado esquerdo do site */
+	}
+				
+		header#cabecalho {							/* para todo cabeçalho (header) com identificação (id) (identificação é representado por "#") = "cabecalho" possuir o seguinte: */
+			border-bottom: 1px #606060 solid;    	/* Borda inferior de 1 pixel na cor cinza escuro e sólida (o solid poderia ser dashed (tracejado), dotted (pontilhado), double (duplicado), entre outros tipos de linha) (para se adicionar uma borda em apenas uma direção pode-se usar os comandos "border-left" (esquerda), "border-right" (direita), "border-bottom" (inferior) e "border-top" (superior)) */
+			height: 180px;							/* Altura de 180 pixels */
+			background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 110px;  /* Imagem de fundo (no url foi usado o link "../_imagens..." e não apenas "_imagens..." devido ao fato de esse ser o arquivo css e não o html, e como estão em pastas diferentes é necessário voltar a pasta padrão onde está o index.html e para isso usa-se os ".." e assim localiza-se a imagem dentro da pasta imagens). Sem repetições (para que o navegador não repita a imagem para preencher todo o fundo), e deve se mover 0 pixels para a esquerda e 110 pixels para baixo */
+	}
+		
+		header#cabecalho h1 {						/* Para todo título h1 de um cabeçalho com identificação (id) (identificação é representado por "#") = "cabecalho" possuir o seguinte: */
+			font-family: 'FonteLogo', sans-serif;	/* Fonte personalizada (ver arquivo no início do css), sem sarifa (serifa é uns traços nos cantos da letra como esse "A") */
+			font-size: 30pt;						/* Tamanho da fonte de 30 pontos */
+			color: #606060;							/* Cor do texto cinza escuro */
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);	/* Texto com sombra de 1 pixel horizontal, 1 pixel vertical, 1 pixel de espalhamento, na cor preto e com transparência de 0.7) */
+			padding: 0px;							/* 0 pixels de espaço interno (o comando está abreviado pois os 0 pixels são em todas as direções, entretanto ele seria "padding: 0px (cima) 0px (direita) 0px (baixo) 0px (esquerda)" respectivamente) (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+			margin-bottom: 0px;						/* Margem inferior de 0 pixels (sem margem inferior) (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+	}
+	
+		header#cabecalho h2 {						/* Para todo título h2 de um cabeçalho com identificação (id) (identificação é representado por "#") = "cabecalho" possuir o seguinte: */
+			font-family: 'FonteSub', sans-serif;	/* Fonte personalizada (ver arquivo no início do css), sem sarifa (serifa é uns traços nos cantos da letra como esse "A") */
+			color: #888888;							/* Texto na cor cinza */
+			font-size: 18pt;						/* Tamanho da fonte de 18 pontos */
+			padding: 0px;							/* 0 pixels de espaço interno (o comando está abreviado pois os 0 pixels são em todas as direções, entretanto ele seria "padding: 0px (cima) 0px (direita) 0px (baixo) 0px (esquerda)" respectivamente) (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+			margin-left: 5px						/* Margem esquerda de 5 pixels (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+	}
+	
+		/* Formatação do grupo section */
+		
+		section#corpo  {							/* Para todo grupo section com identificação (id) (identificação é representado por "#") = "corpo" possuir o seguinte: */
+			display: block;							/* Apresentar como bloco */
+			width: 630px;							/* Largura de 630 pixels */
+			float: left;							/* Flutar na esquerda */
+			border-right: 1px solid black;			/* Borda de 1 pixel, sólida e na cor preto (o solid poderia ser dashed (tracejado), dotted (pontilhado), double (duplicado), entre outros tipos de linha) e na cor branco (para se adicionar uma borda em apenas uma direção pode-se usar os comandos "border-left" (esquerda), "border-right" (direita), "border-bottom" (inferior) e "border-top" (superior)) */
+			padding-right: 20px;					/* Espaço de 20 pixels no lado direito (para que a borda não fique colada) (o comando está abreviado pois os 20 pixels são em todas as direções, entretanto ele seria "padding: 20px (cima) 20px (direita) 20px (baixo) 20px (esquerda)" respectivamente) (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+			padding-left: 20px;					/* Espaço de 20 pixels no lado esquerdo (para que a borda não fique colada) (o comando está abreviado pois os 20 pixels são em todas as direções, entretanto ele seria "padding: 20px (cima) 20px (direita) 20px (baixo) 20px (esquerda)" respectivamente) (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+	}
+	
+		/* Formatação do grupo aside */
+		
+		aside#lateral  {							/* Para todo grupo aside com identificação (id) (identificação é representado por "#") = "lateral" possuir o seguinte: */
+			display: block;							/* Apresentar como bloco */
+			width: 509px;							/* Largura de 509 pixels */
+			float: right;							/* Flutuar para a direita */
+			background-color: #dddddd;				/* Cor de fundo cinza */
+			box-shadow: 2px 2px 2px black;			/* Sombra de 2 pixels horizontal, 2 pixels vertical, 2 pixels de espalhamento e na cor preto */	
+			padding: 10px							/* Aumenta o espaço dentro do aside em 10 pixels em todas as direções (o comando está abreviado pois os 10 pixels são em todas as direções, entretanto ele seria "padding: 10px (cima) 10px (direita) 10px (baixo) 10px (esquerda)" respectivamente) (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+	}
+	
+		/* Formatação do grupo footer */
+		
+		footer#rodape  {							/* Para todo grupo footer com identificação (id) (identificação é representado por "#") = "rodape" possuir o seguinte: */
+			display: block;							/* Apresentar como bloco */
+			clear: both;							/* Limpa as configurações de posição (float) anteriores (volta a se posicionar na direita) */
+			border-top: 1px solid black;			/* Borda no topo de 1 pixel, sólida e na cor preto (o solid poderia ser dashed (tracejado), dotted (pontilhado), double (duplicado), entre outros tipos de linha) e na cor branco (para se adicionar uma borda em apenas uma direção pode-se usar os comandos "border-left" (esquerda), "border-right" (direita), "border-bottom" (inferior) e "border-top" (superior)) */
+	}
+	
+		footer#rodape p {							/* Para todo parágrafo de um grupo footer com identificação (id) (identificação é representado por "#") = "rodape" possuir o seguinte: */
+			text-align: center						/* Texto centralizado */
+	}
+	
+		/* Formatação do grupo table */
+		
+		table#tabelaspec  {							/* Para um grupo table (tabela) com identificação (id) (identificação é representado por "#") = "tabelaspec" possuir o seguinte: */
+			border: 1px solid #606060;				/* Borda de 1 pixel, sólida e na cor cinza escuro (o solid poderia ser dashed (tracejado), dotted (pontilhado), double (duplicado), entre outros tipos de linha) e na cor branco (para se adicionar uma borda em apenas uma direção pode-se usar os comandos "border-left" (esquerda), "border-right" (direita), "border-bottom" (inferior) e "border-top" (superior)) */
+			border-spacing: 0px;					/* Espaço entre bordas de 0 pixels (sem espaço) */
+			margin-left: auto;						/* Margem esquerda automática (centralizada)(para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+			margin-right: auto;						/* Margem direita automática (centralizada)(para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+			
+	}
+	
+		table#tabelaspec td {						/* Para toda célula (td) de um grupo table (tabela) com identificação (id) (identificação é representado por "#") = "tabelaspec" possuir o seguinte: */
+			border: 1px solid #606060;				/* Borda de 1 pixel, sólida e na cor cinza escuro (o solid poderia ser dashed (tracejado), dotted (pontilhado), double (duplicado), entre outros tipos de linha) e na cor branco (para se adicionar uma borda em apenas uma direção pode-se usar os comandos "border-left" (esquerda), "border-right" (direita), "border-bottom" (inferior) e "border-top" (superior)) */
+			padding: 10px;							/* Aumenta o espaço dentro do div em 10 pixels em todas as direções (o comando está abreviado pois os 10 pixels são em todas as direções, entretanto ele seria "padding: 10px (cima) 10px (direita) 10px (baixo) 10px (esquerda)" respectivamente) (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+			text-align: center;						/* Texto centralizado */
+			vertical-align: middle;					/* Alinhamento vertical centralizado */
+	}
+	
+		table#tabelaspec td.ce  {					/* Para toda célula (td) com class (representado por ".") = "ce" de um grupo table (tabela) com identificação (id) (identificação é representado por "#") = "tabelaspec" possuir o seguinte: */ 
+			color: #ffffff;							/* Cor de fonte branco */
+			background-color: #606060;				/* Cor de fundo cinza escuro */
+			vertical-align: top;					/* Posição vertical no topo */
+	}
+	
+		table#tabelaspec td.cd  {					/* Para toda célula (td) com class (representado por ".") = "cd" de um grupo table (tabela) com identificação (id) (identificação é representado por "#") = "tabelaspec" possuir o seguinte: */
+			background-color: #cecece;				/* Cor de fundo cinza claro */
+	}	
+	
+		table#tabelaspec caption  {					/* Para o grupo caption de um grupo table (tabela) com identificação (id) (identificação é representado por "#") = "tabelaspec" possuir o seguinte: */
+			font-size: 15pt;						/* Tamanho da fonte de 15 pontos */
+			color: #888888;							/* Cor da fonte cinza claro */ 
+			font-weight: bold;						/* Negrito */
+	}
+	
+		table#tabelaspec caption span  {			/* Para o grupo span de um grupo caption de um grupo table (tabela) com identificação (id) (identificação é representado por "#") = "tabelaspec" possuir o seguinte: */
+			display: block;							/* Apresentar como bloco */
+			position: relative;						/* Posição relativa (Posição absoluta é a do site, posição relativa é o do próprio grupo) */
+			font-size: 8pt;							/* Tamanho da fonte de 8 pontos */
+			float: right;							/* Flutuar para a direita */
+			color: black;							/* Cor da fonte preto */
+			bottom: -10px;							/* Distância da parte inferior do site de -10 pixels (diminui a distância em 10 pixels) */
+	}
+	
+		/* Formatação do grupo article */
+		
+		article#noticia-principal h2  {				/* Para todo título h2 de um grupo article (artigo) com identificação (id) (identificação é representado por "#") = "noticia-principal" possuir o seguinte: */
+			font-size: 16pt;						/* Tamanho da fonte de 16 pontos */
+			color: black;							/* Cor da fonte preto */
+			background-color: #dddddd;				/* Cor de fundo cinza */
+			padding: 5px 0px 5px 10px; 				/* Aumenta o espaçamento interno superior em 5 pixels, o espaçamento interno esquerdo em 0 pixels (sem espaçamento esquerdo), o espaçamento interno inferior em 5 pixels e o espaçamento interno direito em 10 pixels respectivamente (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+			margin: 10px 0px 10px 0px;				/* Margem externa superior de 10 pixels, margem externa esquerda de 0 pixel (sem margem esquerda) margem externa inferior de 10 pixels e margem externa direita de 0 pixels (sem margem direita) respectivamente (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+	}
+
+		/* Formatação do cabeçalho do grupo article */
+		
+		header#cabecalho-artigo  h1 {				/* Para todo título h1 de um grupo header (cabeçalho) com identificação (id) (identificação é representado por "#") = "cabecalho-artigo" possuir o seguinte: */
+			font-family: 'FonteSub', sans-serif;	/* Fonte "'FonteSub'", sem serifa (serifa é uns traços nos cantos da letra como esse "A") */
+			font-size: 22pt;						/* Tamanho da fonte de 22 pontos */
+			color: #606060;							/* Cor da fonte cinza escuro */
+			margin-bottom: 10px;					/* Margem inferior de 10 pixels (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+	}
+
+		header#cabecalho-artigo  h2 {				/* Para todo título h2 de um grupo header (cabeçalho) com identificação (id) (identificação é representado por "#") = "cabecalho-artigo" possuir o seguinte: */
+			font-family: 'FonteLogo', sans-serif;  	/* Fonte "'FonteLogo'", sem serifa (serifa é uns traços nos cantos da letra como esse "A") */
+			font-size: 13pt;						/* Tamanho da fonte de 13 pontos */
+			color: #888888;							/* Cor da fonte cinza */
+			background-color: #ffffff;				/* Cor de fundo branco */
+			margin-top: -10px;						/* Margem do topo de -10 pixels (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+			margin-left: -10px;						/* Margem esquerda de -10 pixels (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+	}	
+	
+		header#cabecalho-artigo  h3 {				/* Para todo título h3 de um grupo header (cabeçalho) com identificação (id) (identificação é representado por "#") = "cabecalho-artigo" possuir o seguinte: */
+			font-family: 'FonteSub', sans-serif;	/* Fonte "'FonteSub'", sem serifa (serifa é uns traços nos cantos da letra como esse "A") */
+			font-size: 14px;						/* Tamanho da fonte de 14 pixels */
+			margin-top: 5px;						/* Margem do topo de 5 pixels (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+	}	
+	
+		header#cabecalho-artigo  h3.direita {		/* Para todo título h3 com identificação (id) (identificação é representado por "#") = "data" de um grupo header (cabeçalho) com identificação (id) (identificação é representado por "#") = "cabecalho-artigo" possuir o seguinte: */
+			text-align: right;						/* Alinhamento do texto á direita */
+			margin-bottom: 0px;						/* Margem inferior de 0 pixels (sem margem inferior) (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+	}		
+	
+		a {											/* Para toda âncora (links de referência) possuir o seguinte: */
+			color: blue;							/* Cor do texto azul */
+			text-decoration: none;					/* Sem decoração de texto */
+	}
+	
+		a:hover {									/* Ao passar o mouse sobre uma âncora (links de referência) possuir o seguinte: */
+			text-decoration: underline;				/* Texto com decoração sublinhado */
+	}
+	
+		aside#lateral h1 {							/* Para todo título h1 de um grupo aside com identificação (id) (identificação é representado por "#") = "lateral" possuir o seguinte: */
+			Font-family: 'FonteSub', sans-serif;	/* Fonte "'FonteSub'", sem serifa (serifa é uns traços nos cantos da letra como esse "A") */
+			Font-size: 20pt;						/* Tamanho da fonte de 20 pontos */
+			margin-top: 0px							/* Sem margem superior (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+	}
+	
+		aside#lateral h2 {							/* Para todo título h2 de um grupo aside com identificação (id) (identificação é representado por "#") = "lateral" possuir o seguinte: */
+			Font-size: 15pt;						/* Tamanho da fonte de 15 pontos */
+			background-color: #606060;				/* Cor do fundo cinza escuro */
+			padding: 5px 0px 5px 10px;				/* Espaçamento intero: superior 5 pixels, esquerda 0 pixels (sem espaçamento interno na esquerda), inferior 5 pixels e direita 10 pixels respectivamente (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+			color: white							/* Cor do texto branco */			
+	}
+	
+		div#video01 {								/* Para uma div com id (identificação) (identificação é representado por "#") = "video01" possuir o seguinte: */  
+			width: 630px;							/* Largura de 630 pixels */
+	}
+		
+		video#filme01 {								/* Para um grupo video com id (identificação) (identificação é representado por "#") ="filme01" possuir o seguinte: */
+			width: 630px;							/* Largura de 630 pixels */
+	} 
+	
+		div#video02 {								/* Para uma div com id (identificação) (identificação é representado por "#") = "video02" possuir o seguinte: */ 
+			width: 509px;							/* Largura de 509 pixels */
+			margin-top: -17px						/* Diminui a distância do topo em 17 pixels (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+	}
+		
+		video#filme02 {								/* Para um grupo video com id (identificação) (identificação é representado por "#") ="filme02" possuir o seguinte: */
+			width: 509px;							/* Largura de 509 pixels */
+			
+	} 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

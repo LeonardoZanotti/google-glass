@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+	ul#album-fotos {												/* Para um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos" possuir o seguinte: */																				
+		width: 700px;												/* Largura de 700 pixels */
+		margin: 0 auto;												/* Diminuí o espaçamento externo inferior e superior para 0 pixels (sem margem inferior e superior) e deixa as margens laterais automáticas (centralizadas)	(o comando está abreviado pois o 0 e o auto indicam respectivamente superior e esquerda , entretanto ele seria "margin: 0px (cima) auto (direita) 0px (baixo) auto (esquerda)" respectivamente) (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+		padding: 50px;												/* Aumenta o espaço dentro do ul (unordered list) em 50 pixels em todas as direções (o comando está abreviado pois os 50 pixels são em todas as direções, entretanto ele seria "padding: 50px (cima) 50px (direita) 50px (baixo) 50px (esquerda)" respectivamente) (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+		overflow: hidden;											/* Esconder barra de rolagem */
+		list-style: none;											/* Sem estilo de lista (tira as marquinhas tipo - ou bolinha, quadradinho etc) */
+	}
+	
+	ul#album-fotos li {												/* Para os li (list item) de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos" possuir o seguinte: */
+		float: left;												/* Flutuar para a esquerda (isso faz com que os lis se organizem um ao lado do outro) */
+		width: 200px;												/* Largura de 200 pixels */
+		height: 200px;												/* Altura de 200 pixels */
+		margin: 10px;												/* Aumenta o espaço fora do li em 10 pixels em todas as direções (o comando está abreviado pois os 10 pixels são em todas as direções, entretanto ele seria "margin: 10px (cima) 10px (direita) 10px (baixo) 10px (esquerda)" respectivamente) (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+		border: 5px solid #ffffff;									/* Borda de 5 pixels, sólida a na cor branco */
+		background-color: #ffffff;									/* Cor de fundo branco */
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);				/* Sombra de 2 pixels horizontal, 2 pixels vertical, 10 pixels de espalhamento e na cor preto com 0.8 de transparência */
+		transition: 0.7s;											/* Tempo da transição do efeito hover de 0.7 segundos */
+	}
+	
+	ul#album-fotos li span {										/* Para o grupo span de um li (list item) de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos" possuir o seguinte: */										
+		opacity: 0;													/* Opacidade = 0 (não visível) */
+		color: #ffffff;												/* Cor do texto branco */
+		text-shadow: 1px 1px 5px black;								/* Sombra no texto de 1 pixel horizontal, 1 pixel vertical, 5 pixels de espalhamento e na cor preto */
+		background-color: rgba(0, 0, 0, 0.3);						/* 	Cor de fundo preto com 0.3 de transparência */
+		font-size: 11pt;											/* Tamanho da fonte de 11 pontos */
+		line-height: 370px;											/* Altura de linha de 370 pixels */
+		padding: 5px;												/* 5 pixels de espaço interno (o comando está abreviado pois os 5 pixels são em todas as direções, entretanto ele seria "padding: 5px (cima) 5px (direita) 5px (baixo) 5px (esquerda)" respectivamente) (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+		transition: 0.7s;											/* Tempo da transição do efeito hover de 0.7 segundos */
+	}
+	
+	ul#album-fotos li:hover {										/* Aplica um efeito de transição no list item (li) de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos", que ao passar o mouse por cima do li faz o seguinte: */
+		transform: scale(1.5);										/* Escala de 1.5 */
+		
+	}
+	
+	ul#album-fotos li:hover span {									/* Aplica um efeito de transição no grupo span de um list item (li) de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos", que ao passar o mouse por cima do li faz o seguinte: */
+		opacity: 1													/* Opacidade 1 (vísivel) */
+	}	
+	
+	ul#album-fotos li#foto01 {										/* Para um li (list item) com identificação (id) (identificação é representada por "#") = "foto01"  de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos" possuir o seguinte: */
+		background: url("../_imagens/galeria-01.jpg") no-repeat;	/* Fundo com a imagem "galeria-01" e não repetí-la */ 
+		background-position: 50% 50%;								/* A posição da imagem é em 50% dela na horizontal e em 50% dela na vertical respectivamente */	
+		background-color: #ffffff;									/* Cor de fundo branco */
+		background-size: 400px 400px;								/* Tamanho do fundo de 400 pixels horizontal por 400 pixels vertical respectivamente */
+	}
+	
+	ul#album-fotos li#foto01:hover {								/* Aplica um efeito de transição no list item (li) com identificação (id) (identificação é representada por "#") = "foto01"  de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos", que ao passar o mouse por cima do li faz o seguinte: */
+		background-size: 200px 200px								/* Tamanho do fundo de 200 pixels por 200 pixels */
+	}
+	
+	ul#album-fotos li#foto02 {										/* Para um li (list item) com identificação (id) (identificação é representada por "#") = "foto02"  de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos" possuir o seguinte: */
+		background: url("../_imagens/galeria-02.jpg") no-repeat; 	/* Fundo com a imagem "galeria-02" e não repetí-la */ 
+		background-position: 50% 50%;								/* A posição da imagem é em 50% dela na horizontal e em 50% dela na vertical respectivamente */	
+		background-color: #ffffff;									/* Cor de fundo branco */
+		background-size: 400px 400px;								/* Tamanho do fundo de 400 pixels horizontal por 400 pixels vertical respectivamente */
+	}
+	
+	ul#album-fotos li#foto02:hover {								/* Aplica um efeito de transição no list item (li) com identificação (id) (identificação é representada por "#") = "foto02"  de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos", que ao passar o mouse por cima do li faz o seguinte: */
+		background-size: 200px 200px								/* Tamanho do fundo de 200 pixels por 200 pixels */
+	}
+	
+	ul#album-fotos li#foto03 {										/* Para um li (list item) com identificação (id) (identificação é representada por "#") = "foto03"  de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos" possuir o seguinte: */
+		background: url("../_imagens/galeria-03.jpg") no-repeat;	/* Fundo com a imagem "galeria-03" e não repetí-la */ 
+		background-position: 50% 50%;								/* A posição da imagem é em 50% dela na horizontal e em 50% dela na vertical respectivamente */	
+		background-color: #ffffff;									/* Cor de fundo branco */
+		background-size: 400px 400px;								/* Tamanho do fundo de 400 pixels horizontal por 400 pixels vertical respectivamente */
+	}
+	
+	ul#album-fotos li#foto03:hover {								/* Aplica um efeito de transição no list item (li) com identificação (id) (identificação é representada por "#") = "foto03"  de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos", que ao passar o mouse por cima do li faz o seguinte: */
+		background-size: 200px 200px								/* Tamanho do fundo de 200 pixels por 200 pixels */
+	}
+	
+	ul#album-fotos li#foto04 {										/* Para um li (list item) com identificação (id) (identificação é representada por "#") = "foto04"  de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos" possuir o seguinte: */
+		background: url("../_imagens/galeria-04.jpg") no-repeat;	/* Fundo com a imagem "galeria-04" e não repetí-la */ 
+		background-position: 50% 50%;								/* A posição da imagem é em 50% dela na horizontal e em 50% dela na vertical respectivamente */	
+		background-color: #ffffff;									/* Cor de fundo branco */
+		background-size: 400px 400px;								/* Tamanho do fundo de 400 pixels horizontal por 400 pixels vertical respectivamente */
+	}
+	
+	ul#album-fotos li#foto04:hover {								/* Aplica um efeito de transição no list item (li) com identificação (id) (identificação é representada por "#") = "foto04"  de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos", que ao passar o mouse por cima do li faz o seguinte: */
+		background-size: 200px 200px								/* Tamanho do fundo de 200 pixels por 200 pixels */
+	}
+	
+	ul#album-fotos li#foto05 {										/* Para um li (list item) com identificação (id) (identificação é representada por "#") = "foto05"  de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos" possuir o seguinte: */
+		background: url("../_imagens/galeria-05.jpg") no-repeat;	/* Fundo com a imagem "galeria-05" e não repetí-la */
+		background-position: 50% 50%;								/* A posição da imagem é em 50% dela na horizontal e em 50% dela na vertical respectivamente */	
+		background-color: #ffffff;									/* Cor de fundo branco */
+		background-size: 400px 400px;								/* Tamanho do fundo de 400 pixels horizontal por 400 pixels vertical respectivamente */		
+	}
+	
+	ul#album-fotos li#foto05:hover {								/* Aplica um efeito de transição no list item (li) com identificação (id) (identificação é representada por "#") = "foto05"  de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos", que ao passar o mouse por cima do li faz o seguinte: */
+		background-size: 200px 200px								/* Tamanho do fundo de 200 pixels por 200 pixels */
+	}
+	
+	ul#album-fotos li#foto06 {										/* Para um li (list item) com identificação (id) (identificação é representada por "#") = "foto06"  de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos" possuir o seguinte: */
+		background: url("../_imagens/galeria-06.jpg") no-repeat;	/* Fundo com a imagem "galeria-06" e não repetí-la */ 
+		background-position: 50% 50%;								/* A posição da imagem é em 50% dela na horizontal e em 50% dela na vertical respectivamente */	
+		background-color: #ffffff;									/* Cor de fundo branco */
+		background-size: 400px 400px;								/* Tamanho do fundo de 400 pixels horizontal por 400 pixels vertical respectivamente */
+	}
+	
+	ul#album-fotos li#foto06:hover {								/* Aplica um efeito de transição no list item (li) com identificação (id) (identificação é representada por "#") = "foto06"  de um unordered list (ul) com identificação (id) (identificação é representada por "#") = "album-fotos", que ao passar o mouse por cima do li faz o seguinte: */
+		background-size: 200px 200px								/* Tamanho do fundo de 200 pixels por 200 pixels */
+	}

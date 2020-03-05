@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">																
+		
+<head>																			<!-- Cabeçalho -->
+
+	<meta charset="UTF-8"/>														<!-- Linguagem universal de códigos (evita erros de acentuação) -->
+	<title>Tudo sobre Google Glass </title>										
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css";/>			<!-- Chama o arquivo css (estilo.css) (o rel="stylesheet" significa que o documento é uma folha de estilo externa) -->
+	<link rel="stylesheet" type="text/css" href="_css/fotos.css";/>				<!-- Chama o arquivo css (fotos.css) (o rel="stylesheet" significa que o documento é uma folha de estilo externa) -->
+	
+</head>																			<!-- Fim do cabeçalho -->
+<script language="javascript" src="_javascript/funcoes.js">						<!-- Área para códigos javascript (chama o arquivo funcoes.javascript que possui a função mudaFoto(foto), e declara que a linguagem do arquivo é o javascript -->
+</script>																		<!-- Fim dos scripts -->
+<body>																			<!-- Corpo -->
+<div id="interface"> 															<!-- Divisão com identificação (id) interface -->
+
+	<header id="cabecalho">
+	<hgroup>
+	<h1>Google Glass</h1>
+	<h2>A revolução do Google está chegando</h2>  								
+	</hgroup>
+	
+<img id="icone" src="_imagens/fotos.png"/>		<!-- imagem com id = icone -->	
+
+<nav id="menu" onmouseout="mudaFoto('_imagens/fotos.png')"> <!-- Menu de navegação com id="menu", ao tirar o mouse de cima do menu de navegação, executa a função mudaFoto(foto = imagem de uma câmera) -->
+	<h1>Menu Principal</h1>
+		<ul type="disc">														<!-- Unordered list  -->
+			<li onmouseover="mudaFoto('_imagens/home.png')"><a href="index.html">Home</a></li>							<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de uma casa) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código)  -->
+			<li onmouseover="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>		<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de especificações) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código)  -->
+			<li onmouseover="mudaFoto('_imagens/fotos.png')"><a href="fotos.html">Fotos</a></li>						<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de uma câmera) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código)  -->
+			<li onmouseover="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>			<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de multimidia) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código) -->
+			<li onmouseover="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>		<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de contato) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código) -->
+		</ul>
+</nav>
+
+	</header>
+
+<section id="corpo-full">
+	<article id="noticia-principal">
+		<header id="cabecalho-artigo">
+			<h3>Glass > Fotos</h3>
+			<h1>Galeria de imagens do Google Glass</h1>
+			<h2>por Leonardo Zanotti</h2>
+			<h3 class="direita">Atualizado em 01/Maio/2013</h3>
+		</header>
+	</article>
+</section>
+
+<p>Veja na nossa galeria de fotos várias belas imagens que mostram algumas das principais características do Google Glass, como recursos e propriedades que estão impressionando o mundo inteiro. Basta passar o mouse sobre uma das fotos para ver uma versão ampliada e com uma breve descrição.</p>
+
+<ul id="album-fotos">
+	<li id="foto01"><span>Agenda e lembretes</span></li>
+	<li id="foto02"><span>Sergey Brin usando o Glass</span></li>
+	<li id="foto03"><span>Leve e compacto</span></li>
+	<li id="foto04"><span>Sensação de uma tela de 50"</span></li>
+	<li id="foto05"><span>Vários tipos de lente</span></li>
+	<li id="foto06"><span>Informações importantes</span></li>
+
+<footer id="rodape">
+<p>Copyright &copy; 2013 - by Leonardo Zanotti<br/>
+<a href="https://www.facebook.com/profile.php?id=100008383241179" target="_blank"> Facebook </a>  | <a href="https://twitter.com/cafedamanhaa?lang=pt" target="_blank"> Twitter </a> </p>
+</footer>
+
+</div>
+</body>
+</html>

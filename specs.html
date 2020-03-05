@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">																
+		
+<head>																			<!-- Cabeçalho -->
+
+	<meta charset="UTF-8"/>														<!-- Linguagem universal de códigos (evita erros de acentuação) -->
+	<title>Tudo sobre Google Glass </title>										
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css";/>			<!-- Chama o arquivo css (estilo.css) (o rel="stylesheet" significa que o documento é uma folha de estilo externa) -->
+	<link rel="stylesheet" type="text/css" href="_css/specs.css";/>				<!-- Chama o arquivo css (specs.css) (o rel="stylesheet" significa que o documento é uma folha de estilo externa) -->
+	
+</head>																			<!-- Fim do cabeçalho -->
+<script language="javascript" src="_javascript/funcoes.js">						<!-- Área para códigos javascript (chama o arquivo funcoes.javascript que possui a função mudaFoto(foto), e declara que a linguagem do arquivo é o javascript -->
+</script>																		<!-- Fim dos scripts -->
+<body>																			<!-- Corpo -->
+<div id="interface"> 															<!-- Divisão com identificação (id) interface -->
+
+	<header id="cabecalho">
+	<hgroup>
+	<h1>Google Glass</h1>
+	<h2>A revolução do Google está chegando</h2>  								
+	</hgroup>
+	
+<img id="icone" src="_imagens/especificacoes.png"/>		<!-- imagem com id = icone -->	
+
+<nav id="menu" onmouseout="mudaFoto('_imagens/especificacoes.png')"> <!-- Menu de navegação com id="menu", ao tirar o mouse de cima do menu de navegação, executa a função mudaFoto(foto = imagem de especificações) -->
+	<h1>Menu Principal</h1>
+		<ul type="disc">														<!-- Unordered list  -->
+			<li onmouseover="mudaFoto('_imagens/home.png')"><a href="index.html">Home</a></li>							<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de uma casa) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código)  -->
+			<li onmouseover="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>		<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de especificações) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código)  -->
+			<li onmouseover="mudaFoto('_imagens/fotos.png')"><a href="fotos.html">Fotos</a></li>						<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de uma câmera) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código)  -->
+			<li onmouseover="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>			<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de multimidia) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código) -->
+			<li onmouseover="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>		<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de contato) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código) -->
+		</ul>
+</nav>
+
+	</header>
+
+<section id="corpo-full">
+	<article id="noticia-principal">
+		<header id="cabecalho-artigo">
+			<h3>Glass > Especificações</h3>
+			<h1>Raio-X no Google Glass</h1>
+			<h2>por Leonardo Zanotti</h2>
+			<h3 class="direita">Atualizado em 01/Maio/2013</h3>
+		</header>
+<p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>	
+	<section id="conteudo">
+		<img src="_imagens/glass-esquema-marcado.jpg" usemap="#meumapa"/>	<!-- Usa o mapa de nome "meumapa" (o "#" diz que o mapa está nesse mesmo documento) -->
+		<map name="meumapa">												<!-- Cria um mapa de nome "meumapa" -->
+			<area shape="poly" coords="182,218,266,203,268,243,183,257"	href="google-glass.html#tela" target="janela"/>  <!-- Área do mapa poligonal com cordenadas dos cantos do polígono (X,Y), ao clicar sobre essa área do mapa abre o link de referência "google-glass.html" na região onde há um id="tela" no alvo (target) com name="janela" (poderia ser circular (circle), retangular (rect) ou poly (poligonal)) -->
+			<area shape="circle"  coords="158,243,12" href="google-glass.html#camera" target="janela"/>  <!-- Área do mapa circular com centro localizado em X: 158 e Y: 243 e um raio de 12 pixels, ao clicar sobre essa área do mapa abre o link de referência "google-glass.html" na região onde há um id="camera" no alvo (target) com name="janela" (poderia ser circular (circle), retangular (rect) ou poly (poligonal)) -->
+			<area shape="circle" coords="73,52,12" href="google-glass.html#gadgets" target="janela"/>  <!-- Área do mapa circular com centro localizado em X: 73 e Y: 52 e um raio de 12 pixels, ao clicar sobre essa área do mapa abre o link de referência "google-glass.html" na região onde há um id="gadgets" no alvo (target) com name="janela" (poderia ser circular (circle), retangular (rect) ou poly (poligonal)) -->
+			<area shape="poly" coords="27,143,84,213,83,254,24,168" href="google-glass.html#sensores" target="janela"/>  <!-- Área do mapa poligonal com cordenadas dos cantos do polígono (X,Y(, ao clicar sobre o polígono abre o link de referência "google-glass.html" na região onde há um id="sensores" no alvo (target) com name="janela" (poderia ser circular (circle), retangular (rect) ou poly (poligonal)) -->
+		</map>
+		<iframe src="google-glass.html" name="janela" id="frame-spec"></iframe> <!-- Cria uma janela com o documento google glass dentro -->
+	</section>	
+	</article>
+</section>
+
+<footer id="rodape">
+<p>Copyright &copy; 2013 - by Leonardo Zanotti<br/>
+<a href="https://www.facebook.com/profile.php?id=100008383241179" target="_blank"> Facebook </a>  | <a href="https://twitter.com/cafedamanhaa?lang=pt" target="_blank"> Twitter </a> </p>
+</footer>
+
+</div>
+</body>
+</html>

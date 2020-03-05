@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">																
+		
+<head>																			<!-- Cabeçalho -->
+
+	<meta charset="UTF-8"/>														<!-- Linguagem universal de códigos (evita erros de acentuação) -->
+	<title>Tudo sobre Google Glass </title>										
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css";/>			<!-- Chama o arquivo css (estilo.css) (o rel="stylesheet" significa que o documento é uma folha de estilo externa) -->
+	<link rel="stylesheet" type="text/css" href="_css/form.css";/>				<!-- Chama o arquivo css (fotos.css) (o rel="stylesheet" significa que o documento é uma folha de estilo externa) -->
+	
+</head>																			<!-- Fim do cabeçalho -->
+<script language="javascript" src="_javascript/funcoes.js">						<!-- Área para códigos javascript (chama o arquivo funcoes.javascript que possui a função mudaFoto(foto), e declara que a linguagem do arquivo é o javascript -->
+</script>																		<!-- Fim dos scripts -->
+<script>
+	function calc_total() {
+		var qtd = document.getElementById('cQtd').value;
+		document.getElementById('cTot').value = qtd * 200;
+	}
+</script>
+<body>																			<!-- Corpo -->
+<div id="interface"> 															<!-- Divisão com identificação (id) interface -->
+
+<header id="cabecalho">
+	<hgroup>
+	<h1>Google Glass</h1>
+	<h2>A revolução do Google está chegando</h2>  								
+	</hgroup>
+	
+<img id="icone" src="_imagens/contato.png"/>		<!-- imagem com id = icone -->	
+
+<nav id="menu" onmouseout="mudaFoto('_imagens/contato.png')"> <!-- Menu de navegação com id="menu", ao tirar o mouse de cima do menu de navegação, executa a função mudaFoto(foto = imagem de contato) -->
+	<h1>Menu Principal</h1>
+		<ul type="disc">														<!-- Unordered list  -->
+			<li onmouseover="mudaFoto('_imagens/home.png')"><a href="index.html">Home</a></li>							<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de uma casa) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código)  -->
+			<li onmouseover="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>		<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de especificações) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código)  -->
+			<li onmouseover="mudaFoto('_imagens/fotos.png')"><a href="fotos.html">Fotos</a></li>						<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de uma câmera) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código)  -->
+			<li onmouseover="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>			<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de multimidia) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código) -->
+			<li onmouseover="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>		<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de contato) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código) -->
+		</ul>
+</nav>
+</header>
+	
+<section id="corpo-full">
+	<article id="noticia-principal">
+		<header id="cabecalho-artigo">
+			<hgroup>
+			<h3>Fale Conosco > Contato</h3>
+			<h1>Formulário de Contato</h1>
+			<h2>por Leonardo Zanotti</h2>
+			<h3 class="direita">Atualizado em 01/Maio/2013</h3>
+			</hgroup>
+		</header>
+	</article>
+</section>	
+
+<form method="post" id="fContato" action="mailto:MrPeruDelicia@hotmail.com" oninput="calc_total();">	<!-- Insere um formulário com método de transcrição de dados "post" (mais seguro porém menos rápido que o "get" que é mais rápido porém exibe dados na URL (menos seguro)) e da o id ="fContato" (o restante requer outra linguagem para funcionar) -->					
+										<!-- https://www.youtube.com/watch?v=metoFY-x_yg&index=35&list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o -->						  <!-- https://www.youtube.com/watch?v=lwuDJN9Udfc&list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o&index=36 -->
+				<!-- Há alguns códigos que basicamente não tem utilidade pois o site não está realmente funcionando na internet, funcionando com pacotes e servidores -->
+<fieldset id="usuario">								<!-- Cria um grupo dentro de um formulário -->
+	<legend>Identificação do Usuário</legend>		<!-- Cria uma legenda para um fieldset dentro de um formulário -->
+    <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="30" maxlength="30" placeholder="Nome completo"/></p> 	
+    <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 digitos"/></p>
+    <p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="40" maxlength="40" /></P>
+		<fieldset id="sexo"><legend id="sexo">Sexo</legend>
+			<input type="radio" name="tSexo" id="cMasc"/> <label for="cMasc">Masculino</label><br/>  	<!-- Caso queira que a opção já esteja marcada, coloque checked dentro da tag input "<input type="xxx" não sei mais o q blabla checked/>" -->
+			<input type="radio" name="tSexo" id="cFem" /> <label for="cFem">Feminino</label><br/>		<!-- Caso queira que a opção já esteja marcada, coloque checked dentro da tag input "<input type="xxx" não sei mais o q blabla checked/>" -->		
+			<input type="radio" name="tSexo" id="cNao" /> <label for="cNao">Não especificado</label>	<!-- Caso queira que a opção já esteja marcada, coloque checked dentro da tag input "<input type="xxx" não sei mais o q blabla checked/>" -->		
+		</fieldset>
+    <p><label for="cNasc">Data de Nascimento:</label> <input type="date" name="tNasc" id="cNasc"</p>
+</fieldset>
+
+<fieldset id="endereco">					<!-- Cria um grupo dentro de um formulário -->
+	<legend>Endereço do Usuário</legend>	<!-- Cria uma legenda para um fieldset dentro de um formulário -->
+    <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="45" maxlength="80" placeholder="Endereço (Rua, avenida ...)"/></p>
+    <p><label for="cNum">Número:</label> <input type="text" name="tNum" id="cNum" size="9" maxlength="9"/></p>
+    <p><label for="cEst">Estado:</label>
+		<select name="tEst" id="cEst">
+	 	    <option value="0" selected>Selecione o Estado</option> 
+	 		<option value="AC">Acre</option>				<!-- Opção Acre (o value é o que será enviado ao servido) -->
+	 		<option value="AL">Alagoas</option>
+	 		<option value="AP">Amapá</option>
+	 		<option value="AM">Amazonas</option>
+	 		<option value="BA">Bahia</option>
+	 		<option value="CE">Ceará</option>
+	 		<option value="DF">Distrito Federal</option>
+	 		<option value="ES">Espirito Santo</option>
+			<option value="GO">Goiás</option>
+			<option value="MA">Maranhão</option>
+			<option value="MS">Mato Grosso do Sul</option>
+			<option value="MT">Mato Grosso</option>
+			<option value="MG">Minas Gerais</option>
+			<option value="PA">Pará</option>
+			<option value="PB">Paraíba</option>
+			<option value="PR">Paraná</option>
+			<option value="PE">Pernambuco</option>
+			<option value="PI">Piauí</option>
+			<option value="RJ">Rio de Janeiro</option>
+			<option value="RN">Rio Grande do Norte</option>
+			<option value="RS">Rio Grande do Sul</option>
+			<option value="RO">Rondônia</option>
+			<option value="RR">RoraIma</option>
+			<option value="SC">Santa Catarina</option>
+			<option value="SP">São Paulo</option>
+			<option value="SE">Sergipe</option>
+			<option value="TO">Tocantins</option>
+		</select>﻿</p>
+    <p><label for="cCid">Cidade:</label> <input type="text" name="tCid" id="cCid" maxlength="40" size="40" placeholder="Digite sua cidade" list="cidades"/></p>
+		<datalist id="cidades">			
+			<option value="Rio Branco"></option>			<!-- No datalist, o que é mostrado é o value, este que também é enviado para o servido -->
+			<option value="Maceió"></option>				<!-- Caso queria que o value seja apenas o que o servidor recebe e o texto esteja entre -->
+			<option value="Macapá"></option>				<!-- <option> e </option>, deve-se usar data-value no lugar de value -->
+			<option value="Manaus"></option>
+			<option value="Salvador"></option>
+			<option value="Fortaleza"></option>
+			<option value="Brasília"></option>
+			<option value="Vitória"></option>
+			<option value="Goiânia"></option>
+			<option value="São Luís"></option>
+			<option value="Cuiabá"></option>
+			<option value="Campo Grande"></option>
+			<option value="Belo Horizonte"></option>
+			<option value="Belém"></option>
+			<option value="João Pessoa"></option>
+			<option value="Curitiba"></option>
+			<option value="Recife"></option>
+			<option value="Teresina"></option>
+			<option value="Rio de Janeiro"></option>
+			<option value="Natal"></option>
+			<option value="Porto Alegre"></option>
+			<option value="Porto Velho"></option>
+			<option value="Boa Vista"></option>
+			<option value="Florianópolis"></option>
+			<option value="São Paulo"></option>
+			<option value="Aracaju"></option>
+			<option value="Palmas"></option>﻿
+		</datalist>
+</fieldset>
+
+<fieldset id="mensagem">					<!-- Cria um grupo dentro de um formulário -->
+	<legend>Mensagem do Usuário</legend>	<!-- Cria uma legenda para um fieldset dentro de um formulário -->
+    <p><label for="cUrg">Grau de Urgência: Mínimo  <input type="range" name="tUrg" id="cUrg" Min="0" Max="10"/>  Máximo </label></p>
+    <p><label for="cMsg">Mensagem:</label>	<textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Digite aqui sua mensagem"></textarea></p>
+</fieldset>
+
+<fieldset id="pedido">						<!-- Cria um grupo dentro de um formulário -->
+	<legend>Quero um Google Glass</legend>	<!-- Cria uma legenda para um fieldset dentro de um formulário -->
+    <p><input type="checkbox" name="tPed" id="cPed"/>	<label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label for="cCor">Cor:</label>	<input type="color" name="tCor" id="cCor" value="#000000"/></p>
+    <p><label for="cQtd">Quantidade:</label> 	<input type="number" name="tQtd" id="cQtd" min="0" max="100"/></p>
+    <p><label for="cTot">Preço Total: R$	</label>	<input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly/></p>
+</fieldset>
+	<input type="image" name="tEnviar" id="cEnviar" src="_imagens/botao-enviar.png"/>
+</form>
+
+<footer id="rodape">
+<p>Copyright &copy; 2013 - by Leonardo Zanotti<br/>
+<a href="https://www.facebook.com/profile.php?id=100008383241179" target="_blank"> Facebook </a>  | <a href="https://twitter.com/cafedamanhaa?lang=pt" target="_blank"> Twitter </a> </p>
+</footer>
+
+</div>
+</body>
+</html>

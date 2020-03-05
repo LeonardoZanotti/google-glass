@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">																
+		
+<head>																			<!-- Cabeçalho -->
+
+	<meta charset="UTF-8"/>														<!-- Linguagem universal de códigos (evita erros de acentuação) -->
+	<title>Tudo sobre Google Glass </title>										
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css";/>			<!-- Chama o arquivo css (estilo.css) (o rel="stylesheet" significa que o documento é uma folha de estilo externa) -->
+	<link rel="stylesheet" type="text/css" href="_css/media.css";/>				<!-- Chama o arquivo css (fotos.css) (o rel="stylesheet" significa que o documento é uma folha de estilo externa) -->
+	
+</head>																			<!-- Fim do cabeçalho -->
+<script language="javascript" src="_javascript/funcoes.js">						<!-- Área para códigos javascript (chama o arquivo funcoes.javascript que possui a função mudaFoto(foto), e declara que a linguagem do arquivo é o javascript -->
+</script>																		<!-- Fim dos scripts -->
+<body>																			<!-- Corpo -->
+<div id="interface"> 															<!-- Divisão com identificação (id) interface -->
+
+<header id="cabecalho">
+	<hgroup>
+	<h1>Google Glass</h1>
+	<h2>A revolução do Google está chegando</h2>  								
+	</hgroup>
+	
+<img id="icone" src="_imagens/multimidia.png"/>		<!-- imagem com id = icone -->	
+
+<nav id="menu" onmouseout="mudaFoto('_imagens/multimidia.png')"> <!-- Menu de navegação com id="menu", ao tirar o mouse de cima do menu de navegação, executa a função mudaFoto(foto = imagem de multimídia) -->
+	<h1>Menu Principal</h1>
+		<ul type="disc">														<!-- Unordered list  -->
+			<li onmouseover="mudaFoto('_imagens/home.png')"><a href="index.html">Home</a></li>							<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de uma casa) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código)  -->
+			<li onmouseover="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>		<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de especificações) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código)  -->
+			<li onmouseover="mudaFoto('_imagens/fotos.png')"><a href="fotos.html">Fotos</a></li>						<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de uma câmera) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código)  -->
+			<li onmouseover="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>			<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de multimidia) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código) -->
+			<li onmouseover="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>		<!-- List item com link de referência, ao passar o mouse por cima executa a função mudaFoto(foto = imagem de contato) (note que o parâmetro está entre aspas simples devido a já existência de aspas duplas no código) -->
+		</ul>
+</nav>
+</header>
+	
+<section id="corpo-full">
+	<article id="noticia-principal">
+		<header id="cabecalho-artigo">
+			<hgroup>
+			<h3>Glass > Multimídia</h3>
+			<h1>Sons e Videos</h1>
+			<h2>por Leonardo Zanotti</h2>
+			<h3 class="direita">Atualizado em 01/Maio/2013</h3>
+			</hgroup>
+		</header>
+
+
+<div id="tv-radio">
+	<audio id="musica" controls="controls">											<!-- Cria um grupo de audio para inserir um arquivo de áudio, possui identificação ="musica" e possui um player de reprodução "controls" (Foi usado vários sources com diferentes extensões para que mais navegadores consigam reproduzir o arquivo de áudio) -->
+		<source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>		<!-- Carrega um arquivo de áudio no formato mp3 e esclarece o type de áudio mpeg -->
+		<source src="_media/2009-lovers-carvings-bibio.m4a" type="audio/x-aac"/>	<!-- Carrega um arquivo de áudio no formato m4a e esclarece o type de áudio x-aac -->
+		<source src="_media/2009-lovers-carvings-bibio.ogg" type="audio/ogg"/>		<!-- Carrega um arquivo de áudio no formato ogg e esclarece o type de áudio ogg -->
+		Desculpe, não foi possivel carregar o áudio									<!-- Caso nenhum dos arquivos consiga ser carregado é mostrado essa mensagem -->
+	</audio>
+	<video id="filme" controls="controls" poster="_imagens/video-mini03.jpg">		<!-- Cria um grupo de video para inserir um arquivo de video, possui identificação ="filme", possui um player de reprodução "controls" e a imagem que aparece na thumbnail é a "video-mini03.jpg"  (Foi usado vários sources com diferentes extensões para que mais navegadores consigam reproduzir o arquivo de video) -->
+		<source src="_media/getting-started.mp4" type="video/mp4"/>					<!-- Carrega um arquivo de video no formato mp4 e esclarece o type de video mp4 -->
+		<source src="_media/getting-started.webm" type="video/webm"/>				<!-- Carrega um arquivo de video no formato webm e esclarece o type de video webm -->
+		<source src="_media/getting-started.ogv" type="video/ogg"/>					<!-- Carrega um arquivo de video no formato ogv e esclarece o type de video ogg -->
+		Desculpe, não foi possivel carregar o video									<!-- Caso nenhum dos arquivos consiga ser carregado é mostrado essa mensagem -->
+	</video>
+</div>
+
+	</article>
+</section>
+
+<footer id="rodape">
+<p>Copyright &copy; 2013 - by Leonardo Zanotti<br/>
+<a href="https://www.facebook.com/profile.php?id=100008383241179" target="_blank"> Facebook </a>  | <a href="https://twitter.com/cafedamanhaa?lang=pt" target="_blank"> Twitter </a> </p>
+</footer>
+
+</div>
+</body>
+</html>

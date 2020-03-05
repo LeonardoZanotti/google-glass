@@ -1,0 +1,21 @@
+	@charset "UTF-8";							/* Linguagem universal de códigos css, html, js, etc */
+
+	section#conteudo {							/* Para todo grupo section (seção) com identificação (id) (identificação é representada por "#") = "conteudo"  fazer o seguinte: */		
+		width: 1200px;							/* Largura de 1200 pixels */
+		margin: auto;							/* Espaçamento externo automático em todas as direções (centralizado em todas as direções) (o comando está abreviado pois os auto são em todas as direções, entretanto ele seria "margin: auto (cima) auto (direita) auto (baixo) auto (esquerda)" respectivamente) (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+		padding-left: 20px;						/* Espaçamento interno esquerdo de 20 pixels (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+	}
+	
+	iframe#frame-spec {							/* Para todo grupo iframe (janela com documento) com identificação (id) (identificação é representada por "#") = "frame-spec"  fazer o seguinte: */	
+		width: 600px;							/* Largura de 600 pixels */
+		height: 280px;							/* Altura de 280 pixels */
+		border: none;							/* Sem borda */
+	}
+	
+	iframe#frame-spec::-webkit-scrollbar {		/* Para a barra de rolagem do conjunto da web de um grupo iframe (janela com documento) com identificação (id) (identificação é representada por "#") = "frame-spec"  fazer o seguinte: */	
+		display: none;							/* Não apresentar */
+	}
+	
+	map area {									/* Para toda área de um mapa possuir o seguinte: */
+		outline: none;							/* Sem linhas de fora (bordas) */
+	}

@@ -1,2 +1,4 @@
 # google-glass
-HTML site
+HTML site about google-glass
+
+Leonardo Zanotti

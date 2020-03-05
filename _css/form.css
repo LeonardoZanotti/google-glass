@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+form {																		/* Para todo grupo form (formulário) possuir o seguinte: */
+	width: 700px;															/* Largura de 700 pixels */
+	margin: auto;															/* Espaçamento externo automático em todas as direções (centralizado em todas as direções) (o comando está abreviado pois os auto são em todas as direções, entretanto ele seria "margin: auto (cima) auto (direita) auto (baixo) auto (esquerda)" respectivamente) (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+	padding: 30px;															/* Aumenta o espaço dentro do formulário em 13 pixels em todas as direções (o comando está abreviado pois os 30 pixels são em todas as direções, entretanto ele seria "padding: 30px (cima) 30px (direita) 30px (baixo) 30px (esquerda)" respectivamente) (para se adicionar um padding em apenas uma direção pode-se também usar os comandos "padding-left" (esquerda), "padding-right" (direita), "padding-bottom" (inferior) e "padding-top" (superior)) */
+}
+
+legend {																	/* Para todo grupo legend (legenda) possuir o seguinte: */
+	font-size: 18pt;														/* Tamanho da fonte de 18 pontos */
+	font-weight: bold;														/* Fonte com negrito */
+	font-family: sans-serif;												/* Fonte sem serifa (cantos arredondados) */
+	color: #888888;															/* Cor de texto cinza */
+}
+
+legend#sexo {																/* Para um grupo legend (legenda) com identificação (id) (identificação é representado por "#") = "sexo" possuir o seguinte: */
+	font-size: 15pt;														/* Tamanho da fonte de 15 pontos */
+}
+
+input, textarea, select {													/* Para todo grupo input / grupo textarea / grupo select, possuir o seguinte: */
+	font-family: sans-serif;												/* Fonte sem serifa (cantos arredondados) */
+	font-weight: normal;													/* Estilo de texto normal */
+	font-size: 13pt;														/* Tamanho da fonte de 13 pontos */
+	transition: 0.5s;														/* Transição do hover de meio segundo */
+	background-color: rgba(255, 255, 255, 0.5);								/* Cor de fundo branco com 0.5 de transparência */
+}
+
+input:hover, textarea:hover {												/* Aplica um efeito de transição ao passar o mouse por cima de um grupo input ou de um grupo textarea que faz o seguinte: */
+	background-color: #dddddd;												/* Cor de fundo cinza */														
+^}
+
+input#cEnviar {																/* Para um grupo input com identificação (id) (identificação é representado por "#") = "cEnviar" possuir o seguinte: */ 
+	outline: none;															/* Sem bordas */
+}
+
+input#cEnviar:hover {														/* Aplica um efeito de transição ao passar o mouse por cima de um grupo input com identificação (id) (identificação é representado por "#") = "cEnviar" que faz o seguinte: */
+	background-color: #ffffff;												/* Muda a cor de fundo para branco (impede o input:hover) */
+}
+
+fieldset {																	/* Para os grupos fieldset possuir o seguinte: */
+	border-color: #cecece;													/* Cor da borda cinza */
+	margin: 20px;															/* Aumenta o espaço fora do fieldset em 20 pixels em todas as direções (o comando está abreviado pois os 20 pixels são em todas as direções, entretanto ele seria "margin: 20px (cima) 20px (direita) 20px (baixo) 20px (esquerda)" respectivamente) (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */ 
+}
+
+fieldset#sexo {																/* Para um grupo fieldset com identificação (id) (identificação é representado por "#") = "sexo" possuir o seguinte: */
+	width: 200px;															/* Largura de 200 pixels */
+	position: relative;														/* Posição relativa (Posição absoluta é a da página e relativa é a do grupo */
+	margin-left: 50px;														/* Espaçamento esquerdo externo de 50 pixels (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+}
+
+fieldset#usuario {															/* Para um grupo fieldset com identificação (id) (identificação é representado por "#") = "usuario" possuir o seguinte: */
+	background: url("../_imagens/icone-contato.png") no-repeat 98% 95%;		/* Imagem de fundo da url citada, não repetir e se posicionar a 98% da largura á direita e a 95% da altura para baixo */
+}
+
+fieldset#endereco {															/* Para um grupo fieldset com identificação (id) (identificação é representado por "#") = "endereco" possuir o seguinte: */
+	background: url("../_imagens/icone-endereco.png") no-repeat 98% 95%;	/* Imagem de fundo da url citada, não repetir e se posicionar a 98% da largura á direita e a 95% da altura para baixo */
+}
+
+fieldset#mensagem {															/* Para um grupo fieldset com identificação (id) (identificação é representado por "#") = "mensagem" possuir o seguinte: */
+	background: url("../_imagens/icone-mensagem.png") no-repeat 98% 95%;	/* Imagem de fundo da url citada, não repetir e se posicionar a 98% da largura á direita e a 95% da altura para baixo */
+}
+
+fieldset#pedido {															/* Para um grupo fieldset com identificação (id) (identificação é representado por "#") = "pedido" possuir o seguinte: */
+	background: url("../_imagens/icone-pagamento.png") no-repeat 98% 95%;	/* Imagem de fundo da url citada, não repetir e se posicionar a 98% da largura á direita e a 95% da altura para baixo */
+}

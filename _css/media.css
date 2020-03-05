@@ -1,0 +1,24 @@
+@charset="UTF-8";
+
+div#tv-radio {													/* Para um grupo div com identificação (id) (identificação é representado por "#") = "tv-radio" possuir o seguinte: */
+	height: 720px;												/* Altura de 720 pixels */
+	width: 1100px;												/* Largura de 1100 pixels */
+	margin: auto;												/* Espaçamento externo automático em todas as direções (centralizado em todas as direções) (o comando está abreviado pois os auto são em todas as direções, entretanto ele seria "margin: auto (cima) auto (direita) auto (baixo) auto (esquerda)" respectivamente) (para se adicionar uma margem em apenas uma direção pode-se também usar os comandos "margin-left" (esquerda), "margin-right" (direita), "margin-bottom" (inferior) e "margin-top" (superior)) */
+	background: url("../_imagens/radio-tv.png") no-repeat;		/* Fundo com a imagem da url() (imagem de uma tv e um rádio), e não repetir */
+}	
+
+audio#musica {													/* Para um grupo audio com identificação (id) (identificação é representado por "#") = "musica" possuir o seguinte: */
+	display: block;												/* Exibir como bloco */
+	position: relative;											/* Posição relativa (posição absoluta é a da página, relativa é a do grupo (div#tv-radio)) */
+	top: 615px;													/* Distância do topo do grupo de 615 pixels */
+	left: 706px;												/* Distância do lado esquerdo do grupo de 706 pixels */
+	width: 355px												/* Largura de 355 pixels */
+}
+
+video#filme {													/* Para um grupo video com identificação (id) (identificação é representado por "#") = "filme" possuir o seguinte: */ 
+	display: block;												/* Exibir como bloco */
+	position: relative;											/* Posição relativa (posição absoluta é a da página, relativa é a do grupo (div#tv-radio)) */
+	top: 110px;													/* Distância do topo do grupo de 110 pixels */
+	left: 110px;												/* Distância do lado esquerdo do grupo de 110 pixels */
+	width: 530px;												/* Largura de 530 pixels */
+}
